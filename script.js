@@ -1,51 +1,47 @@
-// ----------------toogle icon navbar-------------------------------
-let menuIcon=document.querySelector('#menu-icon');
-let navbar=document.querySelector('.navbar');
+// Toggle icon for navbar
+let menuIcon = document.querySelector('#menu-icon');
+let navbar = document.querySelector('.navbar');
 
-menuIcon.onclick=() =>{
+menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
-    menuIcon.classList.toggle('active');
-}
-
-
-// scroll section for link---------------------------
-
-let sections = document.querySllelectorAll ('section');
-let navlinks = document.querySllelectorAll ('header nav a');
-
-window.onscroll = ()=> {
-    sections.forEach (sec=>{
-        let top=window.scrollY;
-        let offset = sec.offsetTop - 150;
-        let height = sec.offsetHeight;
-        let id= sec.getAttribute ('id');
-
-        if(top>=offset&& top <offset+height){
-            navlinks.forEach(links=>  {
-                links.classlist.remove('active');
-                document.querySelector('header nav a[href* ='+ id +']').classlist.add('active');
-            });
-        };
-    });
-// -------------------------sticky navbar------------------------
-    let header=document.querySelector('header');
-    header.classList.toggle('sticky',window.scrollY>100);
-
-
-
-
-    // ----------------remove  toogle icon and  navbar when click on navbar link(scroll)-------------------------------
-
-    menuIcon.classList.remove('bx-x');
-    navbar.classList.remove('active');  
-    
+    navbar.classList.toggle('active');
 };
 
-// <!-- scroll reveal -->
+// Scroll section for links
+let sections = document.querySelectorAll('section');
+let navLinks = document.querySelectorAll('header nav a');
 
-ScrollReveal({ 
-    // reset: true,
-    distance :'80px',
+window.onscroll = () => {
+    let scrollY = window.scrollY;
+
+    sections.forEach(sec => {
+        let offset = sec.offsetTop - 150;
+        let height = sec.offsetHeight;
+        let id = sec.getAttribute('id');
+
+        if (scrollY >= offset && scrollY < offset + height) {
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + id) {
+                    link.classList.add('active');
+                }
+            });
+        }
+    });
+
+    // Sticky navbar
+    let header = document.querySelector('header');
+    header.classList.toggle('sticky', scrollY > 100);
+
+    // Remove toggle icon and navbar when clicking on navbar link (scroll)
+    menuIcon.classList.remove('bx-x');
+    navbar.classList.remove('active');
+};
+
+// Scroll reveal
+ScrollReveal({
+    reset: true,
+    distance: '80px',
     duration: 2000,
     delay: 200
 });
@@ -55,24 +51,11 @@ ScrollReveal().reveal('.home-img, .services-container, .portfolio-container, .co
 ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
 ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 
-/* --------------typed js-----------*/
-
-    // const typed= new Typed ('.multiple-text',
-    // {
-    //     strings : ['Frontend Developer', 'UI/UX Designer','Graphics Designer'],
-    //     typespeed: 100,
-    //     backSpeed:100,
-    //     backDelay: 1000,
-    //     loop :true,
-
-    // });
-
-    const typed =newTyped( '.multiple-text',{
-        strings : ['Frontend Developer', 'UI/UX Designer','Graphics Designer'],
-        typeSpeed: 100,
-        backSpeed:100,
-        backDelay: 1000,
-        loop :true,
-
-    });
-
+// Typed.js
+const typed = new Typed('.multiple-text', {
+    strings: ['Frontend Developer', 'UI/UX Designer', 'Graphics Designer'],
+    typeSpeed: 100,
+    backSpeed: 100,
+    backDelay: 1000,
+    loop: true
+});

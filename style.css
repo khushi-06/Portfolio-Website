@@ -1,16 +1,14 @@
-/* @import url ('https://fonts.googleapis.com/css2?family=poppins (style: normal, weight: 400, {wght=300.0}),poppins (style: normal, weight: 400, {wght=400.0}),poppins (style: normal, weight: 400, {wght=500.0}),poppins (style: normal, weight: 400, {wght=600.0}),poppins (style: normal, weight: 400, {wght=700.0}),poppins (style: normal, weight: 400, {wght=800.0}),poppins (style: normal, weight: 400, {wght=900.0})'; */
+@import url('https://fonts.googleapis.com/css2?family=poppins:wght@300;400;500;600;700;800;900');
 
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  text-decoration:none;
-  border:none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
   outline: none;
-  scroll-behavior:smooth ;
+  scroll-behavior: smooth;
   font-family: 'poppins', 'sans-serif';
-
 }
 
 :root{
@@ -423,7 +421,7 @@ span{
         padding-bottom: 7rem;
     }
 
-    .contact{
+    .contact-form{
         min-height: auto;
     }
 
@@ -479,7 +477,7 @@ span{
         flex-direction: column-reverse;
     }
 
-    .about img {
+    .about-img {
         width: 70vm;
         margin-top: 4rem;   
     } 
@@ -509,7 +507,7 @@ span{
 }
 
 @media(max-width:365px){
-    .home-img ing {
+    .home-img img {
         width: 90vw;
     }
 
