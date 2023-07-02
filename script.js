@@ -49,13 +49,14 @@ ScrollReveal({
 ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
 ScrollReveal().reveal('.home-img, .services-container, .portfolio-container, .contact', { origin: 'bottom' });
 ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
-ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
+ScrollReveal().reveal('.home-content p, .about-content,.h3', { origin: 'right' });
 
 // Typed.js
 const typed = new Typed('.multiple-text', {
-    strings: ['Frontend Developer', 'UI/UX Designer', 'Graphics Designer'],
+    strings: ['Frontend Developer', 'UI|UX Designer', 'Graphics Designer'],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,
     loop: true
 });
+

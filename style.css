@@ -10,7 +10,6 @@
   scroll-behavior: smooth;
   font-family: 'poppins', 'sans-serif';
 }
-
 :root{
     --bg-colour: #1f242d;
     --second--bg-colour: #323946;
@@ -62,7 +61,7 @@ section {
 }
 
 .navbar a{
-    font: size 1.7rem; 
+    font-size: 1.7rem; 
     color: var(--text-colour);
     margin-left: 4rem ;
     transition: 3s;
@@ -89,7 +88,7 @@ section {
 }
 
 .home-img img {
-    width: 35vw;
+    width: 30vw;
     animation: floatImage 4s ease-in-out infinite;
 }
 
@@ -141,7 +140,7 @@ span{
     height: 4rem;
     background-color: transparent;
     border: .2rem solid var(--main--bg-colour);
-    font-family: 2rem;
+    font-size: 2rem;
     color: var(--main--bg-colour);
     margin: 3rem 1.5rem 3rem 0;
     transition: .5s ease;
